@@ -1,0 +1,23 @@
+{
+  "name": "features",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "commandone": "node topsongs.js",
+    "commandtwo": "node topnews.js",
+    "commandthree": "node topstocks.js",
+    "commandfour": "node special.js",
+    "commandfive": "node facts.js",
+    "commandsix": "node topbillionaire.js",
+    "commandsev": "node corona.js",
+    "dev": "concurrently \"npm run commandone\" \"npm run commandtwo\" \"npm run commandthree\" \"npm run commandfour\" \"npm run commandfive\" \"npm run commandsix\" \"npm run commandsev\" \"npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "electron": "^14.0.1"
+  }
+}
