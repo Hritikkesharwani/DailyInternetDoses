@@ -1,7 +1,7 @@
 # DailyInternetDoses
 Hy!! 
 I made this project to submit on Pepcoding hackathon
-to run this prject you have to install necessary npm
+to run this prject you have to install necessary npm and type command "npm run dev"
 1) puppeteer
 2) fs
 3) path
