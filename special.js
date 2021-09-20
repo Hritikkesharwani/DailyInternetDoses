@@ -7,6 +7,7 @@ let browserstartpromise = pptr.launch({
 
     
 });
+// scraping data from website
 (async function () {
     try{
         let browserobj = await browserstartpromise;
