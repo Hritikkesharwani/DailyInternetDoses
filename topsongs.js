@@ -4,9 +4,8 @@ let browserstartpromise = pptr.launch({
     headless : true,
     defaultViewport : null,
     args : [ "--start-maximized" , "--disable-notifications" ]
-
-    
 });
+// scraping data from website
 (async function () {
     try{
         let browserobj = await browserstartpromise;
@@ -24,7 +23,6 @@ let browserstartpromise = pptr.launch({
                 html+= value[i-1];
                 html += "</li>";
            }
-           
               html += '</div><h4>Source- Spotify </h4></body></html></ul>';
               fs.writeFileSync("songs.html",html);
     } catch (err){
