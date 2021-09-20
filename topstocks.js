@@ -4,9 +4,8 @@ let browserstartpromise = pptr.launch({
     headless : true,
     defaultViewport : null,
     args : [ "--start-maximized" , "--disable-notifications" ]
-
-    
 });
+// scraping data from website
 (async function () {
     try{
         let browserobj = await browserstartpromise;
@@ -16,7 +15,7 @@ let browserstartpromise = pptr.launch({
         await page.keyboard.press('Enter',{delay : 1000 });
 
         let someList = await page.$$(".TrT0Xe");
-         
+  
            let value= [];
            let html = '<html> <head><title>Top stocks</title></head><body><button><a href="mainWindow.html">Go Back</a></button> <div><h1>Latest in Todays Pick</h1><ul>';
            for (let i = 0; i < 8; i++){
@@ -26,7 +25,6 @@ let browserstartpromise = pptr.launch({
                 html += "<li>";
                 html+= value[i];
                 html += "</li>";
-                
            }
           
               html += "</div><h4>source google</h4></body></html></ul>";
