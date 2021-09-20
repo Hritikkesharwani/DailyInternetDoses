@@ -5,7 +5,7 @@ let browserstartpromise = pptr.launch({
     defaultViewport : null,
     args : [ "--start-maximized" , "--disable-notifications" ]
 });
-
+// web scraping
 (async function () {
     try{
         let browserobj = await browserstartpromise;
