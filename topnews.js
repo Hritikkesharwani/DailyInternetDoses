@@ -13,11 +13,8 @@ let browserstartpromise = pptr.launch({
         await page.goto("https://www.hindustantimes.com");
         await page.waitForSelector(".hdg3");
         let someList = await page.$$(".hdg3");
-        
-        
            let value= [];
            let html = '<html> <head><title>Top News</title></head><body><button><a href="mainWindow.html">Go Back</a></button> <div><h1>Todays Headline </h1><ul>';
-
            for (let i = 1; i < 11; i++){
                value[i-1] = await page.evaluate(
             function (element) { return element.textContent }, someList[i]);
